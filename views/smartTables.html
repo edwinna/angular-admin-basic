@@ -1,0 +1,49 @@
+<ol class="breadcrumb">
+	<li class="fa fa-home"> &nbsp;&nbsp;<a href="">首页</a></li>
+	<li><a href="">组件库</a></li>
+	<li class="active">smartTables</li>
+</ol>
+<div class="row md-20" ng-controller="smartTableController">
+	<div class="panel">
+		<div class="panel-heading">
+			<i>图文管理</i>
+		</div>
+		<div class="panel-body">
+			<table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped smart-table">
+				<thead>
+					<tr>
+						<th>海报</th>
+						<th st-sort="name">片名</th>
+						<th st-sort="type">类型</th>
+						<th st-sort="lan">语言</th>
+						<th st-sort="time">放映时间</th>
+					</tr>
+					<tr>
+						<th class="col-sm-offset-8">
+							<input class="input-sm form-control" st-search="name" placeholder="global search ..." type="search" />
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="row in rowCollection">
+						<td><img src="{{row.imgurl}}" style="width:100px;"></td>
+						<td style="vertical-align:middle">{{row.name}}</td>
+						<td style="vertical-align:middle"> {{row.type}}</td>
+						<td style="vertical-align:middle">{{row.lan}}</td>
+						<td style="vertical-align:middle">{{row.time | date}}</td>
+						<td style="vertical-align:middle">
+							<a type="button" ng-click="removeItem(row)" ur-seif="" class="btn btn-sm btn-danger">
+								<i class="fa fa-trash-o">
+								</i>
+							</a>
+							<button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
+								<i class="fa fa-edit">
+								</i>
+							</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

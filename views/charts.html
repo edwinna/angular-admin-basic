@@ -1,0 +1,95 @@
+<ol class="breadcrumb">
+	<li>当前位置</li>
+	<li>组件库</li>
+	<li class="active">图表</li>
+</ol>
+<div class="widget-wrap animated fadeInRight md-20"  >
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="col-sm-9"><i>折线图</i></div>
+					<div class="col-sm-offset-2 col-sm-1" ui-toggle-class="active">
+						<i class="fa fa-cog"></i>
+
+						<!-- 图表设置项 -->
+						<div class="panel panel-default setting-panel" ng-controller="configChartCtrl"> 
+							<div class="panel-body">
+								<div class="list-group">
+									<a class="list-group-item" ng-click='changeChart()'>修改此图表</a>
+									<a  class="list-group-item" ng-click="addChart()">增加图表</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body" ng-controller='chartCtrl'>
+ 					<div class="echarts" id="linechart"></div>
+  				<!-- <echarts type="line" data="{{options}}"></echarts> -->
+ 				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i>条形图</i>
+				</div>
+				<div class="panel-body">
+ 					<div class="echarts" id="barchart"></div>
+<!-- 					<echarts type="bar"></echarts>
+ -->				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i>饼图</i>
+				</div>
+				<div class="panel-body">
+ 					<div class="echarts" id="piechart"></div>
+<!-- 					<echarts type="scatter"></echarts>
+ -->				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i>堆积图</i>
+				</div>
+				<div class="panel-body">
+ 					<div class="echarts" id="stackchart"></div>
+<!-- 					<echarts type="pie"></echarts>
+ -->				</div>
+			</div>
+		</div>
+	</div>
+<!-- 	<div class="row">
+		<div class="col-xs-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i>中国地图</i>
+				</div>
+				<div class="panel-body">
+				</div>
+			</div>
+		</div>
+	</div> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

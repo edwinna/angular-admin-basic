@@ -1,0 +1,121 @@
+<ol class="breadcrumb">
+	<li>当前位置</li>
+	<li class="active">首页</li>
+</ol>
+<div class="md-20">
+	<div class="dashboard-header">
+		<i class="fa fa-desktop"></i><span>Dashboard</span>
+		<div class="welcome">欢迎来到后台管理系统~</div>
+	</div>
+	<div class="panel dashboard-panel">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-xs-3">
+					<div class="dashboard-box bg-o">
+						<div class="col-xs-4">
+							<div class="dashboard-icon fa fa-archive"></div>
+						</div>
+						<div class="col-xs-8">
+							<div class="dashboard-count">31</div>
+							<div class="dashboard-name">店铺数量</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="dashboard-box bg-r">
+						<div class="col-xs-4">
+							<div class="dashboard-icon fa fa-umbrella"></div>
+						</div>
+						<div class="col-xs-8">
+							<div class="dashboard-count">2099</div>
+							<div class="dashboard-name">商品总数</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="dashboard-box bg-g">
+						<div class="col-xs-4">
+							<div class="dashboard-icon fa fa-user-md"></div>
+						</div>
+						<div class="col-xs-8">
+							<div class="dashboard-count">33</div>
+							<div class="dashboard-name">已关注人数</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="dashboard-box bg-b">
+						<div class="col-xs-4">
+							<div class="dashboard-icon fa  fa-users"></div>		
+						</div>
+						<div class="col-xs-8">
+							<div class="dashboard-count">33</div>
+							<div class="dashboard-name">会员总数</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="panel">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-xs-4">
+					<div class="dashboard-box">
+						<p>昨日线下总订单</p>
+						<div class="echarts" id="lineChart" data-type="line"></div>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="dashboard-box">
+						<p>昨日来店人数</p>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="dashboard-box">
+						<p>昨日客流转换</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4">
+					<div class="dashboard-box">
+						<p>昨日线下总订单</p>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="dashboard-box">
+						<p>昨日来店人数</p>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="dashboard-box">
+						<p>昨日客流转换</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="col-sm-9"><i>折线图</i></div>
+			<div class="col-sm-offset-2 col-sm-1" ui-toggle-class="active">
+				<i class="fa fa-cog"></i>
+
+				<!-- 图表设置项 -->
+				<div class="panel panel-default setting-panel" ng-controller="configChartCtrl"> 
+					<div class="panel-body">
+						<div class="list-group">
+							<a class="list-group-item" ng-click='changeChart()'>修改此图表</a>
+							<a  class="list-group-item" ng-click="addChart()">增加图表</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body" ng-controller='chartCtrl'>
+				<div class="echarts" id="linechart"></div>
+			<!-- <echarts type="line" data="{{options}}"></echarts> -->
+		</div>
+	</div>
+</div>

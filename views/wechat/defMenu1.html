@@ -1,0 +1,93 @@
+<div class="row"  ng-controller="defMenuController">
+	<div class="col-md-4">
+		<div class="panel panel-default menu-preview">
+			<div class="panel-heading text-center">
+				<i>自定义菜单预览</i>
+			</div>
+			<div class="panel-body">
+				<ul class="dtable menu-body">
+					<li class="menu-row">
+						<div class="menu-footer">
+							<i class="fa fa-home"></i> 
+						</div>
+					</li>
+					<li ng-repeat="menu in menus" class="menu-row">
+						<div class="menu-preview-row">
+							<ul class="table  table-bordered table-hover triangle-down">
+								<li ng-repeat="sub in menu.subMenus">{{sub.name}}</li>
+							</ul>
+							<div class="table-arrow-border"></div>
+							<div class="table-arrow"></div>
+						</div>
+						<div class="menu-footer">
+							<span>{{menu.name}}</span> 
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="col-md-8">
+					<p>设置完成后，点击“生成导航”，将菜单同步到微信账号（需要等待12小时）</p>
+				</div>
+				<div class="col-md-4">
+					 <a href="" class="btn btn-def">生成导航</a>
+				</div>
+			</div>
+		</div>
+		<section class="clearfix"> 
+			<div ng-repeat="menu in menus">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row border-b"> 
+							<div class="menu-def-title">一级菜单</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<form class="bg-gray menu-def-row row-edit" ng-submit="">
+										<input class="form-control border-none bg-gray" type="text" value='{{menu.name}}' ng-mode="menu.name" readonly>
+										<i class="fa fa-edit" ng-click="editMenu(menu)"></i>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="menu-subs">
+							<div class="menu-def-title">二级菜单</div>
+							<div class="row" ng-repeat="sub in menu.subMenus ">
+								<div class="col-md-6">
+									<form class="form-group" ng-submit="doneEditing(sub, menu)">
+										<div class="bg-gray menu-def-row" >
+											<input class="form-control border-none bg-gray" type="text" value='{{sub.name}}' ng-model="sub.name"  ng-class="{editing: sub.isabled}" ng-disabled="{{sub.isabled}}">
+											<i class="fa fa-trash" ng-click="removeMenu(sub,menu)"></i>
+											<i class="fa fa-edit" ng-click="editMenu(sub,menu)"></i>
+										</div>
+									</form>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group" >
+										<div class="bg-gray menu-def-row">
+											<input class="form-control border-none bg-gray" type="text" value='链接到:{{sub.typeStr}}' readonly>
+											<i class="fa fa-navicon"></i>
+										</div>
+									</div>
+								</div> 
+							</div>
+							<a class="menu-def-title" ng-click="addSubMenu(menu)"><i class="fa fa-plus" ></i>添加二级菜单</a>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</section>
+		<!-- 添加一级菜单 -->
+		<div class="panel panel-default">
+			<div class="pane-body">
+				<div class="border-b">
+					<div class="menu-def-title"><i class="fa fa-plus"  ng-click="addNewMenu()"></i>添加一级菜单</div>
+				</div>
+				<div class="menu-def-title"><i class="fa fa-plus" ng-click="addNewSubMenu()"></i>添加二级菜单</div>
+			</div>
+		</div>
+	</div>
+</div>

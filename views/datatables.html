@@ -1,0 +1,36 @@
+<ol class="breadcrumb">
+	<li class="fa fa-home"> &nbsp;&nbsp;<a href="">首页</a></li>
+	<li><a href="">组件库</a></li>
+	<li class="active">datatable表格</li>
+</ol>
+<div class="row md-20 animated fadeInRight" ng-controller="tableCtrl">
+	<div class="col-md-10">
+		<div class="panel">
+		 	<div class="panel-heading">
+                <i>带过滤功能的简单表格</i>
+            </div>
+			<div class="panel-body">
+				<h4>
+                    <div class="row">
+                        <div class="col-xs-2" id="select-wrap">
+                        	
+                        </div>
+                    </div>
+                </h4>
+				<table ui-datatable class="table" opts="opts" res-opts='{"filterIndex": "2","filterWrapper":"#select-wrap"}'>
+					<thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Position</th>
+			                <th>Salary</th>
+			                <th>Start_date.</th>
+			                <th>Office</th>
+			                <th>Extn</th>
+			                <th>操作</th>
+			            </tr>
+	        		</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

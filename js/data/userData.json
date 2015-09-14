@@ -1,0 +1,50 @@
+[{
+	"account": "manager",
+	"name":"李经理",
+	"role": "普通管理员01",
+	"sex":"男",
+	"tel": "15858588858",
+	"remarks": "公司经理"
+	},{
+	"account": "user",
+	"name":"刘明",
+	"role": "普通管理员",
+	"sex":"男",
+	"tel": "13770650824",
+	"remarks": "系统管理"
+	},{
+	"account": "sale",
+	"name":"王小帅",
+	"role": "销售管理员",
+	"sex":"男",
+	"tel": "15895951331",
+	"remarks": "销售员"
+	},{
+	"account": "manager",
+	"name":"李经理",
+	"role": "普通管理员01",
+	"sex":"男",
+	"tel": "15858588858",
+	"remarks": "公司经理"
+	},{
+	"account": "manager",
+	"name":"李经理",
+	"role": "普通管理员01",
+	"sex":"男",
+	"tel": "15858588858",
+	"remarks": "公司经理"
+	},{
+	"account": "manager",
+	"name":"李经理",
+	"role": "普通管理员01",
+	"sex":"男",
+	"tel": "15858588858",
+	"remarks": "公司经理"
+	},{
+	"account": "manager",
+	"name":"李经理",
+	"role": "普通管理员01",
+	"sex":"男",
+	"tel": "15858588858",
+	"remarks": "公司经理"
+	}]

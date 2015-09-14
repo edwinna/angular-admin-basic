@@ -1,0 +1,78 @@
+<ol class="breadcrumb">
+	<li class="fa fa-home"> &nbsp;&nbsp;<a href="">首页</a></li>
+	<li><a href="">通道管理</a></li>
+	<li class="active">微信管理</li>
+</ol>
+<div class="row md-20">
+	<div class="col-sx-10">
+		<div class="panel">
+				<div class="panel-body">
+					<ul class="nav-tabs nav" id="tabNav" tabswitch>
+	                    <li class="active"><a href="#tab1">快捷菜单管理</a></li>
+	                    <li><a href="#tab2">自定义菜单管理</a></li>
+	                    <li><a href="#tab3">自定义回复</a></li>
+	                    <li><a href="#tab4">群发素材管理</a></li>
+	                    <li><a href="#tab5">群发图文管理</a></li>
+	    			</ul>
+	    			<div class="tab-content" ng-controller='wechatMenuController'>
+	    				 <div class="tab-panel active" id="tab1">
+	    				 	<div class="row">
+	    				 		<div class="col-md-8">
+	    				 			<p>注意：快捷菜单的第一个按钮为显示首页（系统生成）；最多显示4个快捷菜单。</p>
+	    				 		</div>
+								<div class="col-md-offset-2 col-md-1">
+									<a ui-sref="app.channel.addShortcut" class="btn btn-primary">新建快捷菜单</a>
+								</div>
+	    				 	</div>
+	           				<table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped smart-table">
+								<thead>
+						            <tr>
+						                <th>图标</th>
+						                <th>名称</th>
+						                <th>事件类型</th>
+						                <th>显示顺序</th>
+						                <th>是否显示</th>
+						                <th>操作</th>
+						            </tr>
+				        		</thead>
+				        			<tbody>
+										<tr ng-repeat="menu in menuList">
+											<td><i class="{{menu.icon}}"></i></td>
+											<td>{{menu.name}}</td>
+											<td> {{menu.type}}</td>
+											<td>{{menu.order}}</td>
+											<td>{{menu.isShow}}</td>
+											<td>
+												<button type="button" ng-click="removeItem(menu)" class="btn btn-sm btn-danger">
+													<i class="fa fa-trash-o">
+													</i>
+												</button>
+												<button type="button" ng-click="removeItem(menu)" class="btn btn-sm btn-danger">
+													<i class="fa fa-edit">
+													</i>
+												</button>
+											</td>
+										</tr>
+									</tbody>
+							</table>
+	        			</div>
+	        			 <div class="tab-panel" id="tab2" ng-include="'views/wechat/defMenu1.html'">
+	        			</div>
+	        			 <div class="tab-panel" id="tab3">
+	           				这是第三个菜单管理
+	        			</div>
+	        			 <div class="tab-panel" id="tab4">
+	           				<p>这是第四个菜单管理</p>
+	        			</div>
+	        			 <div class="tab-panel" id="tab5">
+	           				<p>这是菜单管理5</p>
+	        			</div>
+	        			 <div class="tab-panel" id="tab6">
+	           				<p>这是菜单管理六</p>
+	        			</div>
+	    			</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+</div>

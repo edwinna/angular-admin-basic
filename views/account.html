@@ -1,0 +1,69 @@
+<ol class="breadcrumb">
+    <li>当前位置</li>
+    <li>基础设置</li>
+    <li class="active">账户信息</li>
+</ol> 
+<div class="md-20 animated fadeInRight">
+    <div class="panel panel-default" ng-controller="accountController">
+        <div class="panel-heading">
+            账户信息
+        </div>
+        <div class="panel-body">
+            <div class="form-horizontal showcase-form" name="accForm" >
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">商场名称</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" value="account.name" ng-model="account.name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">电话</label>
+                    <div class="col-sm-4">
+                        <input type="tel" class="form-control" value="account.tel" ng-model="account.tel">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">logo图</label>
+                    <div class="col-sm-4">
+                         <ui-dropzone url="/file-upload" maxFiles="10" attrid="logo" message="上传图片" imgUrl="http://imagesy.airad.com/mbis/1138/images/1433139076734mCZu2aCApQ.png" ng-model="account.logoUrl">
+                        </ui-dropzone> 
+                    </div>
+                    <div class="col-sm-2 upload-tip">logo图片大小不能超过1M</div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">商场全景图</label>
+                    <div class="col-sm-4">
+                        <ui-dropzone url="/file-upload" maxFiles="14" attrid="storeUpload"  message="上传商场图片">
+                        </ui-dropzone>              
+                     </div>
+                    <div class="col-sm-2 upload-tip">商场图片大小不能超过1M</div>
+                </div>
+                 <div class="form-group">
+                    <label class="col-sm-2 control-label">公共二维码</label>
+                    <div class="col-sm-4">
+                         <ui-dropzone url="/file-upload" maxFiles="12" attrid="codeUpload" message="上传二维码图片">
+                        </ui-dropzone> 
+                    </div>
+                    <div class="col-sm-2 upload-tip">二维码图片大小不能超过1M</div>
+                </div>
+                <div class="form-group">
+                   <label class="col-sm-2 control-label">地址</label>
+                   <div class="col-sm-4">
+                        <input type="text" class="form-control" ng-model="account.addr"></input>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">简介</label>
+                    <div class="col-sm-4">
+                        <textarea class="form-control" ng-model="account.introduction"></textarea>
+                    </div>
+                </div>
+
+                <!--表单校验 -->
+                <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<ol class="breadcrumb">
+	<li class="fa fa-home"> &nbsp;&nbsp;<a href="">首页</a></li>
+	<li><a href="">营销管理</a></li>
+	<li class="active">活动管理</li>
+</ol>
+<div class="row md-20" ng-controller="ActivityController">
+	<div class="panel">
+		<div class="panel-heading">
+			<i>活动列表</i>
+		</div>
+		<div class="panel-body">
+			<table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped smart-table">
+				<thead>
+					<div class="col-md-offset-6 col-md-6">
+						<input class="form-control" st-search="name" placeholder="global search ..." type="search" />
+					</div>
+					<tr>
+						<th>活动名称</th>
+						<th st-sort="">活动简介</th>
+						<th st-sort="type">所属商户</th>
+						<th st-sort="lan">开始时间</th>
+						<th st-sort="time">到期时间</th>
+						<th st-sort="time">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="row in rowCollection">
+						<td>{{row.name}}</td>
+						<td style="vertical-align:middle">{{row.brief}}</td>
+						<td style="vertical-align:middle"> {{row.bname}}</td>
+						<td style="vertical-align:middle">{{row.starttime}}</td>
+						<td style="vertical-align:middle">{{row.endtime}}</td>
+						<td style="vertical-align:middle">
+							<button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
+								<i class="fa fa-trash-o">
+								</i>
+							</button>
+							<button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
+								<i class="fa fa-edit">
+								</i>
+							</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
